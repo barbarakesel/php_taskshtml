@@ -14,6 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $conn->real_escape_string($_POST['lastName']);
     $email = $conn->real_escape_string($_POST['email']);
 
+// Регулярное выражение для проверки email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Ошибка: Некорректный формат email!";
+        exit();
+    }
+    
     $sql = "INSERT INTO users (first_name, last_name, email) VALUES ('$firstName', '$lastName', '$email')";
 
     if ($conn->query($sql) === TRUE) {
