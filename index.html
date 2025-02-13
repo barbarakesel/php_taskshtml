@@ -23,6 +23,7 @@
             <div class="col-md-7 col-lg-8">
                 <h4 class="mb-3">Form</h4>
                 <form class="needs-validation" novalidate="" action="process.php" method="POST">
+                    <input type="hidden" name="form_type" value="form1">
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label">First name</label>
@@ -49,12 +50,30 @@
                             </div>
                         </div>
 
-
-
-
                         <hr class="my-4">
 
-                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Done</button>
+                </form>
+            </div>
+        </div>
+        //////
+        <div class="row g-5">
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Form 2</h4>
+                <form class="needs-validation" novalidate="" action="process.php" method="POST">
+                    <input type="hidden" name="form_type" value="form2">
+                    <div class="row g-3">
+                        <div class="col-sm-12">
+                            <label for="comment" class="form-label">Text</label>
+                            <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                            <div class="invalid-feedback">
+                                Comment is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Done</button>
                 </form>
             </div>
         </div>
